@@ -1,5 +1,5 @@
 #!/bin/sh
-cd "${0%/*}"
+cd "${0%/*}";
 # Some platforms do not accept the -o flag for uname; any warnings printed to the terminal concerning this can be safely ignored...
 mkdir "CLI";
 if [ `uname -o` = "Msys" ]; then
