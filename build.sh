@@ -1,11 +1,7 @@
 #!/bin/sh
 # Some platforms do not accept the -o flag for uname; any warnings printed to the terminal concerning this can be safely ignored...
 cd "${0%/*}" && mkdir "CLI";
-if [ `uname -o` = "Msys" ]; then
-  git clone "https://github.com/samuelvenable/SDL3-ImGui-FileDialogs" "CLI/ImFileDialog";
-else
-  git clone "https://github.com/samuelvenable/SDL2-ImGui-FileDialogs" "CLI/ImFileDialog";
-fi;
+git clone "https://github.com/samuelvenable/SDL2-ImGui-FileDialogs" "CLI/ImFileDialog";
 git clone "https://github.com/ScratchEverywhere/ScratchEverywhere" "CLI/ScratchEverywhere";
 cd "CLI/ImFileDialog" && make && cd ../.. && cd "CLI/ScratchEverywhere" && cmake . && make && cd ../..;
 if [ `uname -o` = "Msys" ]; then
