@@ -10,7 +10,7 @@ else
   cd "CLI/SDL2-ImGui-FileDialogs" && make && cd "../..";
 fi;
 git clone "https://github.com/ScratchEverywhere/ScratchEverywhere" "CLI/ScratchEverywhere";
-cd "CLI/ScratchEverywhere" && cmake . && make && cd "../..";
+cd "CLI/ScratchEverywhere" && cmake "." && make && cd "../..";
 if [ `uname -o` = "Msys" ]; then
   g++ "main.cpp" "apifilesystem/filesystem.cpp" "apiprocess/process.cpp" -o "ScratchEverywhere.exe" -I"." -std=c++17 -DNULLIFY_STDERR -Wall -static-libgcc -static-libstdc++ -static -lntdll -lshell32 -lole32 -luuid -Wl,--subsystem,console; "./ScratchEverywhere.exe";
 elif [ `uname` = "Darwin" ]; then
