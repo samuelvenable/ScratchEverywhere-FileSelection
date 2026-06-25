@@ -8,6 +8,8 @@ Adds file selection dialog on startup to SE! for opening a scratch game.
 
 Supports Windows, macOS, GNU/Linux, FreeBSD, DragonFly BSD, NetBSD, OpenBSD, Solaris, and illumos.
 
+Windows is the only platform currently which uses SDL3 instead of SDL2, (don't ask why I did that).
+
 **Build Dependencies:**
 - Windows: MSYS2, MinGW, pacman, g++, make, pkg-config, sdl3, SE! dependencies
 - macOS: Xcode command line tools, MacPorts, clang++, make, sdl2, SE! dependencies
